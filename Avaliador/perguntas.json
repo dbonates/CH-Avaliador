@@ -1,0 +1,137 @@
+[
+    {
+        "question": "Qual a principal diferença entre uma view e uma layer no iOS?",
+        "score": "3",
+        "option4": "Layers possuem uma resolução melhor",
+        "option1": "A view possuí a capacidade de receber e interpretar toques e gestos, a layer não",
+        "option5": "Layers mudam de acordo com o dispositivo, views não",
+        "option2": "É possível trocar a cor de fundo da layer, mas não da view",
+        "option3": "Numa table view ou collection view é melhor usar layers porque são mais rápidas"
+    },
+    {
+        "question": "Em Swift, qual a diferença entre unowned e weak quando referenciamos self numa closure?",
+        "score": "4",
+        "option4": "Weak evita retain cicles, unowned não",
+        "option1": "É mais seguro usar weak, pois se usarmos unowned e o objeto for desalocado antes de chamar a closure, o app trava",
+        "option5": "Unowned evita retain cicles, weak não",
+        "option2": "É mais seguro usar unowned, pois se usarmos weak e o objeto for desalocado antes de chamar a closure, o app trava",
+        "option3": "Weak terá uma performance melhor pois o objeto será desalocado mais cedo"
+    },
+    {
+        "question": "Em Swift, qual a utilidade do comando defer?",
+        "score": "3",
+        "option4": "Executar um bloco de código em outra queue",
+        "option1": "Executar um bloco de código sempre antes da função retornar",
+        "option5": "Evitar que o namespace fique poluído",
+        "option2": "Executar um bloco de código sempre que um erro ocorrer na função atual",
+        "option3": "Executar um bloco de código mais rapidamente"
+    },
+    {
+        "question": "O que acontece quando colocamos o ! (ponto de exclamação) após uma referência a um valor, se este valor for nil?",
+        "score": "1",
+        "option4": "Se o valor vier de um framework, o app trava",
+        "option1": "O app trava",
+        "option5": "O código não compila",
+        "option2": "Nada acontece",
+        "option3": "Se o valor for um objeto, nada acontece"
+    },
+    {
+        "question": "Como poderíamos reimplementar a funcionalidade de optionals em Swift?",
+        "score": "4",
+        "option4": "Utilizando um enum com três cases",
+        "option1": "Utilizando um enum genérico com dois cases",
+        "option5": "Não é possível reimplementar optionals em Swift",
+        "option2": "Utilizando uma struct",
+        "option3": "Utilizando uma classe com uma propriedade"
+    },
+    {
+        "question": "Quantos valores podem ser retornados por uma função em Swift?",
+        "score": "1",
+        "option4": "Ilimitados, se a função for de uma struct",
+        "option1": "Ilimitados, usando tupla",
+        "option5": "No máximo dois",
+        "option2": "Apenas um",
+        "option3": "Ilimitados, se a função for de uma classe"
+    },
+    {
+        "question": "Quais as principais diferenças entre um Set e um Array?",
+        "score": "2",
+        "option4": "Um Set só pode conter objetos e não structs e é mais lento",
+        "option1": "Um Set não é ordenado e o acesso aos seus índices é mais rápido",
+        "option5": "Um Array só pode conter objetos e não structs e é mais rápido que um Set",
+        "option2": "Um Array não é ordenado e o acesso aos seus índices é mais rápido",
+        "option3": "Um Set pode conter vários itens iguais e é mais lento"
+    },
+    {
+        "question": "Por que precisamos declarar funções como mutating em structs, quando elas alteram alguma propriedade?",
+        "score": "5",
+        "option4": "Para que o compilador possa copiar a memória da struct para a pilha",
+        "option1": "Para que o mecanismo de copy-on-write possa fazer a cópia do valor na memória",
+        "option5": "Para se certificar de que o valor não é nil",
+        "option2": "Para diferenciar de uma função numa classe",
+        "option3": "Para diferenciar de uma função num protocolo"
+    },
+    {
+        "question": "Quais elementos da linguagem Swift podem adotar protocolos?",
+        "score": "2",
+        "option4": "Class e struct",
+        "option1": "Class, struct e enum",
+        "option5": "Enum e struct",
+        "option2": "Protocol, class e struct",
+        "option3": "Struct, class e func"
+    },
+    {
+        "question": "Em Swift, qual a forma de fornecer uma implementação padrão de um método em um protocolo?",
+        "score": "2",
+        "option4": "Criando uma classe que implementa o protocolo",
+        "option1": "Criando uma extension do protocolo",
+        "option5": "Criando um segundo protocolo que implementa o primeiro",
+        "option2": "Criando uma extension da classe que o adota",
+        "option3": "Criando uma struct que implementa o protocolo"
+    },
+    {
+        "question": "Por que só devemos fazer downloads da internet de modo assíncrono, fora da main queue?",
+        "score": "3",
+        "option4": "Porque há uma falha de segurança que pode ser explorada se fizermos downloads na main queue.",
+        "option1": "Porque a main queue precisa estar livre para atualizar a interface, downloads na main queue podem travar a interface.",
+        "option5": "Porque para fazer o parsing de JSON precisamos estar fora da main queue.",
+        "option2": "Porque a main queue não tem conexão com a internet, o download iria falhar.",
+        "option3": "Porque não há um runloop na main queue, tornando impossível o funcionamento de uma NSURLSession."
+    },
+    {
+        "question": "Qual a diferença entre open e public?",
+        "score": "3",
+        "option4": "Open só pode ser usado em structs, enquanto public pode ser usado também em classes",
+        "option1": "Classes declaradas como open podem ser herdadas em outros módulos, classes declaradas com public só podem ser herdadas no mesmo módulo",
+        "option5": "Open significa que a classe aceita extensions fora do seu módulo, classes declaradas como public não aceitam extensions fora do módulo",
+        "option2": "Classes declaradas como public podem ser herdadas em outros módulos, classes declaradas com open só podem ser herdadas no mesmo módulo",
+        "option3": "Na prática, são a mesma coisa"
+    },
+    {
+        "question": "Qual o nível de acesso padrão num módulo Swift?",
+        "score": "1",
+        "option4": "private",
+        "option1": "internal",
+        "option5": "protected",
+        "option2": "public",
+        "option3": "open"
+    },
+    {
+        "question": "Qual é o mecanismo da linguagem Swift que permite com que coleções (como arrays) trabalhem com qualquer tipo?",
+        "score": "3",
+        "option4": "Optionals",
+        "option1": "Generics",
+        "option5": "Copy-on-write",
+        "option2": "Structs",
+        "option3": "Enums"
+    },
+    {
+        "question": "Em Swift, como podemos escrever um range de números entre 0 e 5, excluindo o 5?",
+        "score": "2",
+        "option4": "0..5",
+        "option1": "0..<5",
+        "option5": "0<>5",
+        "option2": "0…5",
+        "option3": "0>..5"
+    }
+]
