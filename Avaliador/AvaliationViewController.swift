@@ -75,12 +75,31 @@ class AvaliationViewController: UIViewController {
         let currentQuestion = avaliationManager.questions[currentQuestionIndex]
         statusInfoLabel.text = statusUpdatedInfo
         
-        questionTitleLabel.text = currentQuestion.question
-        option1Label.text = currentQuestion.alternatives?[0].content as? String
-        option2Label.text = currentQuestion.alternatives?[1].content as? String
-        option3Label.text = currentQuestion.alternatives?[2].content as? String
-        option4Label.text = currentQuestion.alternatives?[3].content as? String
-        option5Label.text = currentQuestion.alternatives?[4].content as? String
+        
+        UIView.transition(with: questionTitleLabel, duration: 0.2, options: [.transitionCrossDissolve], animations: {
+            self.questionTitleLabel.text = currentQuestion.question
+        }, completion: nil)
+        
+        
+        let transitionType = UIViewAnimationOptions.transitionFlipFromBottom
+        
+        UIView.transition(with: option1Label, duration: 0.2, options: [transitionType], animations: {
+            self.option1Label.text = currentQuestion.alternatives?[0].content as? String
+        }, completion: nil)
+        UIView.transition(with: option2Label, duration: 0.3, options: [transitionType], animations: {
+            self.option2Label.text = currentQuestion.alternatives?[1].content as? String
+        }, completion: nil)
+        UIView.transition(with: option3Label, duration: 0.4, options: [transitionType], animations: {
+            self.option3Label.text = currentQuestion.alternatives?[2].content as? String
+        }, completion: nil)
+        UIView.transition(with: option4Label, duration: 0.5, options: [transitionType], animations: {
+            self.option4Label.text = currentQuestion.alternatives?[3].content as? String
+        }, completion: nil)
+        UIView.transition(with: option5Label, duration: 0.6, options: [transitionType], animations: {
+            self.option5Label.text = currentQuestion.alternatives?[4].content as? String
+        }, completion: nil)
+        
+        
     }
     
     func confirmTapped() {
