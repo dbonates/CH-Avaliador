@@ -10,9 +10,10 @@ import UIKit
 
 struct ThemeManager {
     static let textColor: UIColor = .gray
-    static let buttonTextColorNormal: UIColor = .black
-    static let buttonTextColorHighlighted: UIColor = .gray
-    static let buttonBackgroundColor: UIColor = .lightGray
+    static let buttonTextColorNormal: UIColor = .actionColor
+    static let buttonTextColorHighlighted: UIColor = .breaktimeColor
+    static let buttonBackgroundColor: UIColor = .white
+    static let placeHolderColor: UIColor = UIColor(hexString: "#0E6F48")
     
     static var baseFontSize: CGFloat = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad ? 22 : 16
     static var baseMargin: CGFloat = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad ? 30 : 10

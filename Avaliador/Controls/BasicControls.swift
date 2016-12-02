@@ -25,8 +25,8 @@ struct BasicControls {
     static func basicInput(placeholder: String) -> UITextField {
         
         let basicInput = UITextField(frame: CGRect(x: 0, y: 0, width: 280, height: 44))
-        basicInput.placeholder = placeholder
-        basicInput.textColor = ThemeManager.textColor
+        basicInput.textColor = .white
+        basicInput.attributedPlaceholder = NSAttributedString(string:placeholder, attributes:[NSForegroundColorAttributeName: ThemeManager.placeHolderColor])
         
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0, y: basicInput.bounds.height - 1, width: basicInput.bounds.width, height: 1)

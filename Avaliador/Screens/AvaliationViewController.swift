@@ -47,7 +47,6 @@ class AvaliationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .white    
         title = "Avaliação"
     }
@@ -115,22 +114,53 @@ class AvaliationViewController: UIViewController {
     
     // MARK: UI Building
     func buildHeader() {
-        statusInfoLabel = BasicControls.basicLabel(fontSize: ThemeManager.baseFontSize * 3, bold: true)
+        
+        let bgView = UIView(frame: CGRect.zero)
+        bgView.translatesAutoresizingMaskIntoConstraints = false
+        bgView.backgroundColor = .mainGreen
+        view.addSubview(bgView)
+        
+        let logoImgView = UIImageView(image: UIImage(named: "cocoaheads_teammember"))
+        logoImgView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logoImgView)
+        logoImgView.align(attribute: .top, offset: ThemeManager.baseMargin / 2)
+        logoImgView.align(attribute: .left, offset: ThemeManager.baseMargin / 2)
+        
+        
+        let headerLabel = BasicControls.basicLabel(fontSize: ThemeManager.baseFontSize * 1.2, bold: true)
+        headerLabel.font = UIFont.boldSystemFont(ofSize: ThemeManager.baseFontSize * 1.5)
+        headerLabel.text = "CocoaHeads Conference 2016"
+        view.addSubview(headerLabel)
+        headerLabel.align(attribute: .left, offset: logoImgView.bounds.width + ThemeManager.baseMargin)
+        headerLabel.align(attribute: .right, offset: -ThemeManager.baseMargin)
+        headerLabel.align(attribute: .top, offset: ThemeManager.baseMargin * 1.2)
+        headerLabel.textColor = .breaktimeColor
+        
+        
+        statusInfoLabel = BasicControls.basicLabel(fontSize: ThemeManager.baseFontSize * 1.2, bold: true)
         statusInfoLabel.text = "status info"
         view.addSubview(statusInfoLabel)
-        statusInfoLabel.align(attribute: .left, offset: ThemeManager.baseMargin)
-        statusInfoLabel.align(attribute: .right, offset: ThemeManager.baseMargin)
-        statusInfoLabel.align(attribute: .top, offset: ThemeManager.baseMargin * 2)
+        statusInfoLabel.align(attribute: .left, offset: logoImgView.bounds.width + ThemeManager.baseMargin)
+        statusInfoLabel.align(attribute: .right, offset: -ThemeManager.baseMargin)
+        statusInfoLabel.align(attribute: .top, withAttribute: .bottom, ofView: headerLabel, offset: ThemeManager.baseMargin)
+        statusInfoLabel.textColor = .white
         
         currentUserInfo = BasicControls.basicLabel(fontSize: ThemeManager.baseFontSize, bold: true)
         currentUserInfo.translatesAutoresizingMaskIntoConstraints = false
         currentUserInfo.text = userInfo
+        currentUserInfo.textColor = .white
         view.addSubview(currentUserInfo)
-        currentUserInfo.align(attribute: .left, offset: ThemeManager.baseMargin)
+        currentUserInfo.align(attribute: .left, offset: logoImgView.bounds.width + ThemeManager.baseMargin)
         currentUserInfo.align(attribute: .right, offset: -ThemeManager.baseMargin)
         currentUserInfo.align(attribute: .top, withAttribute: .bottom, ofView: statusInfoLabel)
+        
+        bgView.align(attribute: .top, withAttribute: .top, ofView: view, offset: 0)
+        bgView.align(attribute: .left, withAttribute: .left, ofView: view, offset: 0)
+        bgView.align(attribute: .right, withAttribute: .right, ofView: view, offset: 0)
+        bgView.align(attribute: .bottom, withAttribute: .bottom, ofView: currentUserInfo, offset: ThemeManager.baseMargin)
+        
+        logoImgView.align(attribute: .height, withAttribute: .height, ofView: bgView, offset: 0)
     }
-    
     
     
     func buildQuestionView() {
@@ -139,10 +169,11 @@ class AvaliationViewController: UIViewController {
         
         questionTitleLabel = BasicControls.basicLabel(fontSize: fontSize * 1.3, bold: true)
         questionTitleLabel.text = "titulo da questão"
+        questionTitleLabel.textColor = .mainGreen
         view.addSubview(questionTitleLabel)
         questionTitleLabel.align(attribute: .left, offset: ThemeManager.baseMargin)
         questionTitleLabel.align(attribute: .right, offset: -ThemeManager.baseMargin)
-        questionTitleLabel.align(attribute: .top, withAttribute: .bottom, ofView: currentUserInfo, offset: ThemeManager.baseMargin * 2)
+        questionTitleLabel.align(attribute: .top, withAttribute: .bottom, ofView: currentUserInfo, offset: ThemeManager.baseMargin * 3)
         
         let alternativesCount = 5 // should be dynamic in the future, a question could be true/false, for example
         for idx in 0..<alternativesCount {

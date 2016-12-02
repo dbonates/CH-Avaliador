@@ -19,11 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let rootViewController = LoginViewController()
+        
+//        let rootViewController = AvaliationViewController(for: User(name: "dbo", email: "dbo@dba.com")!)
+        
+//        let rootViewController = EndScreen()
+//        rootViewController.userRate = 70
+//        rootViewController.user = User(name: "dbo", email: "dbo@dba.com", score: 70)
+        
+        
         let mainNavigationController = UINavigationController(rootViewController: rootViewController)
         mainNavigationController.isNavigationBarHidden = true
         window?.rootViewController = mainNavigationController
         
         window?.makeKeyAndVisible()
+        UIApplication.shared.statusBarStyle = .lightContent
         
         return true
     }

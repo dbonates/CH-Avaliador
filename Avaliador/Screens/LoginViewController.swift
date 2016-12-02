@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     
     var nameInput: UITextField!
     var emailInput: UITextField!
+    var logoImgView: UIImageView!
     
     override func viewDidLoad() {
         self.title = "Bem Vindo!"
@@ -19,14 +20,35 @@ class LoginViewController: UIViewController {
     }
     
     func buildUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.mainGreen
+        
+        
+        logoImgView = UIImageView(image: UIImage(named: "cocoaheads_teammember"))
+        logoImgView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logoImgView)
+        logoImgView.align(attribute: .top, offset: ThemeManager.baseMargin * 2)
+        logoImgView.align(attribute: .centerX, withAttribute: .centerX, ofView: view)
         
         let introLabel: UILabel = BasicControls.basicLabel(fontSize: ThemeManager.baseFontSize)
-        introLabel.text = "Seja vem vindo ao Teste iOS da Primeira Cocoaheads Conference 2016! Sortearemos algumas perguntas relacionadas a diferentes níveis de conhecimento que irão ajudar a identificar o quanto você sabe sobre iOS, e talvez, pontos de interesse a serem desenvolvidos no assunto.\n\nEsse teste tem a pretenção de ser apenas uma ferramenta auxiliar, logo o resultado do teste é particular e NÃO será armazenado ou divulgado de nenhuma forma.\n\nO teste começa com o preenchimento do seu nome e email abaixo. Por favor preencha os campos e use o botão \"Iniciar Teste\"."
+        introLabel.textColor = .white
+        introLabel.textAlignment = .center
+        
+        let cleanText = "Bem vindo à\nCocoaheads Conference 2016\n\nPara iniciar o teste, Por favor preencha os campos e use o botão \"Iniciar Teste\"."
+        
+        let defaultAttributes:[String:AnyObject] = [NSFontAttributeName: introLabel.font, NSForegroundColorAttributeName: UIColor.white]
+        
+        let wellcomeAttributes:[String:AnyObject] = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: ThemeManager.baseFontSize * 1.2) , NSForegroundColorAttributeName: UIColor.breaktimeColor]
+        
+        let attrStr = NSMutableAttributedString(string: cleanText, attributes: defaultAttributes)
+        
+        attrStr.addAttributes(wellcomeAttributes, range: cleanText.NS.range(of: "Cocoaheads Conference 2016"))
+
+        introLabel.attributedText = attrStr
+        
         view.addSubview(introLabel)
-        introLabel.align(attribute: .left, offset: ThemeManager.baseMargin * 2)
-        introLabel.align(attribute: .right, offset: -ThemeManager.baseMargin * 2)
-        introLabel.align(attribute: .top, offset: ThemeManager.baseMargin * 3)
+        introLabel.align(attribute: .left, offset: ThemeManager.baseMargin * 3)
+        introLabel.align(attribute: .right, offset: -ThemeManager.baseMargin * 3)
+        introLabel.align(attribute: .top, withAttribute: .bottom, ofView: logoImgView, offset: ThemeManager.baseMargin)
         
         nameInput = BasicControls.basicInput(placeholder: "seu nome aqui")
         view.addSubview(nameInput)

@@ -10,6 +10,7 @@ import UIKit
 
 extension UIColor {
     
+    static var mainGreen: UIColor { return UIColor(hexString: "#083E28") }
     static var mainColor: UIColor { return UIColor(hexString: "#16a085") }
     static var actionColor: UIColor { return UIColor(hexString: "#1abc9c") }
     static var talkColor: UIColor { return UIColor(hexString: "#D84315") }
