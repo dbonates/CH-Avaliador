@@ -15,6 +15,14 @@ struct Alternative<T> {
 }
 
 extension Alternative {
+    
+    var text: String {
+        get {
+            guard let textContent = self.content as? String else { return "" }
+            return textContent
+        }
+    }
+    
     init?(with content: Any, isCorrect: Bool) {
         self.content = content as? T
         self.isCorrect = isCorrect
