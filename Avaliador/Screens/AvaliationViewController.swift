@@ -52,15 +52,10 @@ class AvaliationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        
+        view.backgroundColor = .white    
         title = "Avaliação"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
     
     func startAvaliation() {
         showCurrentQuestion()
