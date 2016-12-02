@@ -33,10 +33,7 @@ class EndScreen: UIViewController {
         view.backgroundColor = .white
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
+    
     func buildUI() {
         
         endMessageLabel = BasicControls.basicLabel(fontSize: ThemeManager.baseFontSize * 2)
