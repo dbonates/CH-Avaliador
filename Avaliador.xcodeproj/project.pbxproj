@@ -24,6 +24,7 @@
 		37C7ECBA1DEDFA0E00C5CEC4 /* AvaliationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ECB91DEDFA0E00C5CEC4 /* AvaliationViewController.swift */; };
 		37C7ECBC1DEDFB5300C5CEC4 /* perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = 37C7ECBB1DEDFB5300C5CEC4 /* perguntas.json */; };
 		E8CE08BA1DF107D600C42AED /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */; };
+		E8CE08C21DF118B700C42AED /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		37C7ECB91DEDFA0E00C5CEC4 /* AvaliationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliationViewController.swift; sourceTree = "<group>"; };
 		37C7ECBB1DEDFB5300C5CEC4 /* perguntas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = perguntas.json; sourceTree = "<group>"; };
 		E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 				37C7ECA91DEDF95200C5CEC4 /* Array+Extensions.swift */,
 				E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */,
 				37C7ECA71DEDF93400C5CEC4 /* UIView+Extensions.swift */,
+				E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -109,7 +111,6 @@
 				37C7ECB11DEDF9AB00C5CEC4 /* Question.swift */,
 				37C7ECAB1DEDF96600C5CEC4 /* User.swift */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -120,7 +121,6 @@
 				37C7ECB71DEDF9F800C5CEC4 /* EndScreen.swift */,
 				37C7ECB51DEDF9DB00C5CEC4 /* LoginViewController.swift */,
 			);
-			name = Screens;
 			path = Screens;
 			sourceTree = "<group>";
 		};
@@ -131,7 +131,6 @@
 				37C7ECAD1DEDF97C00C5CEC4 /* RequestManager.swift */,
 				37C7ECA31DEDF8E600C5CEC4 /* ThemeManager.swift */,
 			);
-			name = Managers;
 			path = Managers;
 			sourceTree = "<group>";
 		};
@@ -140,7 +139,6 @@
 			children = (
 				37C7ECA51DEDF90F00C5CEC4 /* BasicControls.swift */,
 			);
-			name = Controls;
 			path = Controls;
 			sourceTree = "<group>";
 		};
@@ -150,7 +148,6 @@
 				37C7EC9A1DEDF89A00C5CEC4 /* LaunchScreen.storyboard */,
 				37C7ECBB1DEDFB5300C5CEC4 /* perguntas.json */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -233,6 +230,7 @@
 				37C7ECAA1DEDF95200C5CEC4 /* Array+Extensions.swift in Sources */,
 				37C7ECAC1DEDF96600C5CEC4 /* User.swift in Sources */,
 				37C7ECBA1DEDFA0E00C5CEC4 /* AvaliationViewController.swift in Sources */,
+				E8CE08C21DF118B700C42AED /* UILabel+Extensions.swift in Sources */,
 				37C7ECB21DEDF9AB00C5CEC4 /* Question.swift in Sources */,
 				37C7ECB01DEDF99700C5CEC4 /* Alternative.swift in Sources */,
 				37C7ECA61DEDF90F00C5CEC4 /* BasicControls.swift in Sources */,

@@ -16,12 +16,8 @@ class AvaliationViewController: UIViewController {
     var statusInfoLabel: UILabel!
     var currentUserInfo: UILabel!
     var questionTitleLabel: UILabel!
-    var option1Label: UILabel!
-    var option2Label: UILabel!
-    var option3Label: UILabel!
-    var option4Label: UILabel!
-    var option5Label: UILabel!
     
+    var alternativeLabels = [UILabel]()
     var alternativeButtons = [UIButton]()
     var selectedOption: Int = -1
     
@@ -70,12 +66,19 @@ class AvaliationViewController: UIViewController {
         let currentQuestion = avaliationManager.questions[currentQuestionIndex]
         statusInfoLabel.text = statusUpdatedInfo
         
-        questionTitleLabel.text = currentQuestion.question
-        option1Label.text = currentQuestion.alternatives?[0].content as? String
-        option2Label.text = currentQuestion.alternatives?[1].content as? String
-        option3Label.text = currentQuestion.alternatives?[2].content as? String
-        option4Label.text = currentQuestion.alternatives?[3].content as? String
-        option5Label.text = currentQuestion.alternatives?[4].content as? String
+        
+        UIView.transition(with: questionTitleLabel, duration: 0.2, options: [.transitionCrossDissolve], animations: {
+            self.questionTitleLabel.text = currentQuestion.question
+        }, completion: nil)
+        
+        
+        let transitionType = UIViewAnimationOptions.transitionFlipFromBottom
+        
+        guard let alternatives = currentQuestion.alternatives else { return }
+        
+        for (idx, alternativeLabel) in alternativeLabels.enumerated() {
+            alternativeLabel.displayText(text: alternatives[idx].text, duration: 0.1 * Double(0 + idx), transitionType: transitionType)
+        }
     }
     
     func confirmTapped() {
@@ -141,32 +144,21 @@ class AvaliationViewController: UIViewController {
         questionTitleLabel.align(attribute: .right, offset: -ThemeManager.baseMargin)
         questionTitleLabel.align(attribute: .top, withAttribute: .bottom, ofView: currentUserInfo, offset: ThemeManager.baseMargin * 2)
         
-        
-        option1Label = BasicControls.basicLabel(fontSize: fontSize)
-        view.addSubview(option1Label)
-        option2Label = BasicControls.basicLabel(fontSize: fontSize)
-        view.addSubview(option2Label)
-        option3Label = BasicControls.basicLabel(fontSize: fontSize)
-        view.addSubview(option3Label)
-        option4Label = BasicControls.basicLabel(fontSize: fontSize)
-        view.addSubview(option4Label)
-        option5Label = BasicControls.basicLabel(fontSize: fontSize)
-        view.addSubview(option5Label)
-        
-        let optArray = [option1Label, option2Label, option3Label, option4Label, option5Label]
-        
-        for idx in 0..<5 {
+        let alternativesCount = 5 // should be dynamic in the future, a question could be true/false, for example
+        for idx in 0..<alternativesCount {
+            
+            let alternativeLabel = BasicControls.basicLabel(fontSize: fontSize)
+            alternativeLabels.append(alternativeLabel)
+            view.addSubview(alternativeLabel)
             
             let topOffset = idx == 0 ? ThemeManager.baseMargin * 2 : ThemeManager.baseMargin
-            let upperView = idx == 0 ? questionTitleLabel : optArray[idx-1]
-            if let optLbl = optArray[idx] {
-                optLbl.align(attribute: .left, offset: ThemeManager.baseMargin * 2)
-                optLbl.align(attribute: .right, offset: -ThemeManager.baseMargin)
-                optLbl.align(attribute: .top, withAttribute: .bottom, ofView: upperView!, offset: CGFloat(topOffset))
+            let upperView = idx == 0 ? questionTitleLabel : alternativeLabels[idx-1]
+            alternativeLabel.align(attribute: .left, offset: ThemeManager.baseMargin * 2)
+            alternativeLabel.align(attribute: .right, offset: -ThemeManager.baseMargin)
+            alternativeLabel.align(attribute: .top, withAttribute: .bottom, ofView: upperView!, offset: CGFloat(topOffset))
                 
-                addButtonsForOptions(for: optLbl, answerTag: idx)
-                
-            }
+            addButtonsForOptions(for: alternativeLabel, answerTag: idx)
+            
         }
         
         
