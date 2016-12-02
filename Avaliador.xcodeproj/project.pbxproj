@@ -23,6 +23,7 @@
 		37C7ECB81DEDF9F800C5CEC4 /* EndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ECB71DEDF9F800C5CEC4 /* EndScreen.swift */; };
 		37C7ECBA1DEDFA0E00C5CEC4 /* AvaliationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C7ECB91DEDFA0E00C5CEC4 /* AvaliationViewController.swift */; };
 		37C7ECBC1DEDFB5300C5CEC4 /* perguntas.json in Resources */ = {isa = PBXBuildFile; fileRef = 37C7ECBB1DEDFB5300C5CEC4 /* perguntas.json */; };
+		E8BCF8001DF1EF51001FDBCA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCF7FF1DF1EF51001FDBCA /* String+Extensions.swift */; };
 		E8CE08BA1DF107D600C42AED /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */; };
 		E8CE08C21DF118B700C42AED /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		37C7ECB71DEDF9F800C5CEC4 /* EndScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
 		37C7ECB91DEDFA0E00C5CEC4 /* AvaliationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliationViewController.swift; sourceTree = "<group>"; };
 		37C7ECBB1DEDFB5300C5CEC4 /* perguntas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = perguntas.json; sourceTree = "<group>"; };
+		E8BCF7FF1DF1EF51001FDBCA /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */,
 				37C7ECA71DEDF93400C5CEC4 /* UIView+Extensions.swift */,
 				E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */,
+				E8BCF7FF1DF1EF51001FDBCA /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				37C7ECB81DEDF9F800C5CEC4 /* EndScreen.swift in Sources */,
 				37C7ECB41DEDF9C000C5CEC4 /* AvaliationManager.swift in Sources */,
 				37C7ECAA1DEDF95200C5CEC4 /* Array+Extensions.swift in Sources */,
+				E8BCF8001DF1EF51001FDBCA /* String+Extensions.swift in Sources */,
 				37C7ECAC1DEDF96600C5CEC4 /* User.swift in Sources */,
 				37C7ECBA1DEDFA0E00C5CEC4 /* AvaliationViewController.swift in Sources */,
 				E8CE08C21DF118B700C42AED /* UILabel+Extensions.swift in Sources */,
@@ -297,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -341,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
