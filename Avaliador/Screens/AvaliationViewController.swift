@@ -188,7 +188,7 @@ class AvaliationViewController: UIViewController {
             
             let topOffset = idx == 0 ? ThemeManager.baseMargin * 2 : ThemeManager.baseMargin
             let upperView = idx == 0 ? questionTitleLabel : alternativeLabels[idx-1]
-            alternativeLabel.align(attribute: .left, offset: ThemeManager.baseMargin * 2)
+            alternativeLabel.align(attribute: .left, offset: ThemeManager.baseMargin * 2.5)
             alternativeLabel.align(attribute: .right, offset: -ThemeManager.baseMargin)
             alternativeLabel.align(attribute: .top, withAttribute: .bottom, ofView: upperView!, offset: CGFloat(topOffset))
                 

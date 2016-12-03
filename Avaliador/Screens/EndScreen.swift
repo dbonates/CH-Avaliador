@@ -155,16 +155,11 @@ class EndScreen: UIViewController {
         record.setValue(userRate, forKey: "rate")
         
         do {
-            // Save Record
             try record.managedObjectContext?.save()
-            print("Saved!")
             
         } catch {
             let saveError = error as NSError
             print("\(saveError), \(saveError.userInfo)")
-            
-            // Show Alert View
-            print("Your to-do could not be saved.")
         }
         
     }

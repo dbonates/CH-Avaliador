@@ -59,6 +59,7 @@ struct BasicControls {
         basicButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: ThemeManager.baseMargin, bottom: 0, right: ThemeManager.baseMargin)
         basicButton.imageEdgeInsets = UIEdgeInsets(top: 3, left: ThemeManager.baseMargin, bottom: -3, right: 0)
         basicButton.setImage(UIImage(named: "unselected"), for: .normal)
+        basicButton.setImage(UIImage(named: "unselected"), for: .highlighted)
         basicButton.setImage(UIImage(named: "selected"), for: .selected)
         
         return basicButton
