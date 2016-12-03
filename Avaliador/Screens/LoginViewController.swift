@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
+    
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     var nameInput: UITextField!
     var emailInput: UITextField!
@@ -91,6 +94,7 @@ class LoginViewController: UIViewController {
         }
         
         let avalVc = AvaliationViewController(for: user)
+        avalVc.managedObjectContext = self.managedObjectContext
         navigationController?.pushViewController(avalVc, animated: true)
     }
     
@@ -100,4 +104,5 @@ class LoginViewController: UIViewController {
         let result = emailTest.evaluate(with: emailStr)
         return result
     }
+    
 }

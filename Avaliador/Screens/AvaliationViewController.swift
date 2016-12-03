@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class AvaliationViewController: UIViewController {
+
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     var avaliationManager: AvaliationManager!
     
@@ -108,6 +111,7 @@ class AvaliationViewController: UIViewController {
         let endScreen = EndScreen()
         endScreen.userRate = avaliationManager.rate
         endScreen.user = avaliationManager.user
+        endScreen.managedObjectContext = self.managedObjectContext
         navigationController?.pushViewController(endScreen, animated: true)
     }
     

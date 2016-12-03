@@ -26,6 +26,7 @@
 		E8BCF8001DF1EF51001FDBCA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCF7FF1DF1EF51001FDBCA /* String+Extensions.swift */; };
 		E8CE08BA1DF107D600C42AED /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */; };
 		E8CE08C21DF118B700C42AED /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */; };
+		E8E67FA41DF27789001CB679 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8E67FA21DF27789001CB679 /* UserData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		E8BCF7FF1DF1EF51001FDBCA /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		E8CE08B91DF107D600C42AED /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		E8CE08C11DF118B700C42AED /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		E8E67FA31DF27789001CB679 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				E8CE08BC1DF10AA000C42AED /* Models */,
 				E8CE08C01DF10F7700C42AED /* Resources */,
 				E8CE08BD1DF10AB400C42AED /* Screens */,
+				E8E67FA91DF27860001CB679 /* DataModels */,
 				37C7EC911DEDF89A00C5CEC4 /* AppDelegate.swift */,
 				37C7EC981DEDF89A00C5CEC4 /* Assets.xcassets */,
 				37C7EC9D1DEDF89A00C5CEC4 /* Info.plist */,
@@ -120,9 +123,9 @@
 		E8CE08BD1DF10AB400C42AED /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				37C7ECB51DEDF9DB00C5CEC4 /* LoginViewController.swift */,
 				37C7ECB91DEDFA0E00C5CEC4 /* AvaliationViewController.swift */,
 				37C7ECB71DEDF9F800C5CEC4 /* EndScreen.swift */,
-				37C7ECB51DEDF9DB00C5CEC4 /* LoginViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -152,6 +155,14 @@
 				37C7ECBB1DEDFB5300C5CEC4 /* perguntas.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E8E67FA91DF27860001CB679 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				E8E67FA21DF27789001CB679 /* UserData.xcdatamodeld */,
+			);
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				E8CE08BA1DF107D600C42AED /* UIColor+Extensions.swift in Sources */,
 				37C7ECA41DEDF8E600C5CEC4 /* ThemeManager.swift in Sources */,
 				37C7ECB61DEDF9DB00C5CEC4 /* LoginViewController.swift in Sources */,
+				E8E67FA41DF27789001CB679 /* UserData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +414,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E8E67FA21DF27789001CB679 /* UserData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E8E67FA31DF27789001CB679 /* UserData.xcdatamodel */,
+			);
+			currentVersion = E8E67FA31DF27789001CB679 /* UserData.xcdatamodel */;
+			name = UserData.xcdatamodeld;
+			path = Models/UserData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 37C7EC861DEDF89A00C5CEC4 /* Project object */;
 }
