@@ -10,7 +10,7 @@ import Foundation
 
 struct AvaliationManager {
     
-    let questionsTotal: Int = 15
+    let questionsTotal: Int = 34
     
     let questions: [Question]
     var user: User

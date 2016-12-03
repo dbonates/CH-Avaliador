@@ -57,7 +57,7 @@
     "question" : "Quais as principais diferenças entre um Set e um Array?",
     "score" : "2",
     "option4" : "Um Set só pode conter objetos e não structs e é mais lento",
-    "option1" : "Um Set não é ordenado e o acesso aos seus índices é mais rápido",
+    "option1" : "Um Set não é ordenado e o acesso aos seus elementos é mais rápido",
     "option5" : "Um Array só pode conter objetos e não structs e é mais rápido que um Set",
     "option2" : "Um Array não é ordenado e o acesso aos seus índices é mais rápido",
     "option3" : "Um Set pode conter vários itens iguais e é mais lento"
@@ -133,5 +133,185 @@
     "option5" : "0<>5",
     "option2" : "0…5",
     "option3" : "0>..5"
+  },
+  {
+    "question" : "",
+    "score" : "",
+    "option4" : "",
+    "option1" : "",
+    "option5" : "",
+    "option2" : "",
+    "option3" : ""
+  },
+  {
+    "question" : "Qual a diferença entre private e fileprivate no swift 3 ?",
+    "score" : "1",
+    "option4" : "fileprivate é uma palavra reservada apenas nos frameworks de swift, enquanto private é utilizada nos frameworks de Objective-C",
+    "option1" : "Como o nome indica, a palavra reservada fileprivate limita o acesso à entidade ao arquivo de origem em que ele é declarado.",
+    "option5" : "fileprivate e private são iguais. Entretanto, private é utilizado em Structs e fileprivate em Classes.",
+    "option2" : "O fileprivate é utilizado na declaração de arquivos e o private na declaração de funções",
+    "option3" : "Internamente ambos possuem a mesma funcionalidade"
+  },
+  {
+    "question" : "O que é Core Data?",
+    "score" : "1",
+    "option4" : "É um novo framework que permite a sincronização de informações entre vários dispositivos, via iCloud.",
+    "option1" : "É um framework que pode ser usado para gerenciar a camada de models de um app, incluindo persistência.",
+    "option5" : "É uma biblioteca open-source criada para facilitar o gerenciamento de informações nos apps.",
+    "option2" : "É uma versão do banco de dados SQLite otimizada para dispositivos móveis.",
+    "option3" : "É um framework muito usado para processamento de imagens e vídeos no iOS."
+  },
+  {
+    "question" : "Para que servem objetos do tipo NSPredicate?",
+    "score" : "3",
+    "option4" : "Para classificar documentos de acordo com uma análise estatística.",
+    "option1" : "Para definir condições lógicas que podem ser usadas numa busca ou para filtrar objetos em memória.",
+    "option5" : "Para armazenar objetos no disco de forma que possam ser transmitidos pela internet.",
+    "option2" : "Para ordenar os resultados de uma busca de forma crescente ou decrescente.",
+    "option3" : "Para analisar uma string e extrair a categoria linguística de cada palavra."
+  },
+  {
+    "question" : "Para que serve o Grand Central Dispatch (GCD)?",
+    "score" : "2",
+    "option4" : "Para transmitir dados pela internet de forma eficiente.",
+    "option1" : "Para executar código de forma concorrente em múltiplos núcleos, em filas gerenciadas pelo sistema.",
+    "option5" : "Para armazenar objetos na memória de forma que possam ser acessados rapidamente.",
+    "option2" : "Para criar tickets que podem ser adicionados à wallet nos dispositivos iOS.",
+    "option3" : "É um framework que serve para comunicação entre o iOS e o watchOS."
+  },
+  {
+    "question" : "O que é Autolayout?",
+    "score" : "2",
+    "option4" : "É uma tecnologia que cria as telas dos apps automaticamente com base em um arquivo plist.",
+    "option1" : "É um sistema que calcula dinamicamente o tamanho e posição de views de acordo com regras que podemos especificar.",
+    "option5" : "É a tecnologia principal utilizada pelos storyboards.",
+    "option2" : "É um framework para criação de layouts usado pelos aplicativos de produtividade da Apple como Pages e Keynote.",
+    "option3" : "É um framework para criação de interfaces que foi introduzido no watchOS e depois integrado aos demais sistemas."
+  },
+  {
+    "question" : "Porque é uma boa prática delegates terem referência fraca?",
+    "score" : "1",
+    "option4" : "Porque não é possível fazer uma referência forte a um delegate",
+    "option1" : "Para evitar referências cíclicas",
+    "option5" : "Para persistir os delegates em memória",
+    "option2" : "Na prática não faz diferença",
+    "option3" : "Está na guideline da Apple"
+  },
+  {
+    "question" : "Em Swift, para que serve a keyword guard?",
+    "score" : "1",
+    "option4" : "Modificar o tipo de acesso a uma função",
+    "option1" : "Evitar que um bloco\/função continue a não ser que uma ou mais condições sejam verdadeiras",
+    "option5" : "Nenhuma das anteriores",
+    "option2" : "Executar um código sempre antes do bloco\/função retornar",
+    "option3" : "Modificar o tipo de acesso a uma variável da classe"
+  },
+  {
+    "question" : "Escolha a alternativa verdadeira sobre Frameworks e Static Libraries.",
+    "score" : "3",
+    "option4" : "Em Static Libraries, Views podem ser editadas no Interface Builder",
+    "option1" : "Em um Framework, todo o código e assets são reunidos em um único arquivo",
+    "option5" : "Static Libraries são linkadas em tempo de execução",
+    "option2" : "O iOS carrega apenas uma cópia de uma Static Library no sistema e a compartilha com todos os apps que a utilizam",
+    "option3" : "Podemos associar assets a uma Static Library"
+  },
+  {
+    "question" : "Escolha a alternativa verdadeira sobre Convenience Initializers.",
+    "score" : "3",
+    "option4" : "Sempre devem inicializar todas as propriedades da classe",
+    "option1" : "Sempre devem chamar outro inicializador da mesma classe",
+    "option5" : "São obrigatórios ao criar extensions para Structs",
+    "option2" : "Não permitem a passagem de parâmetros",
+    "option3" : "São obrigatórios ao criar extensions para classes específicas"
+  },
+  {
+    "question" : "Quais das ferramentas abaixo é instalada junto com o Xcode e pode ser usada para depurar Memory Leaks?",
+    "score" : "2",
+    "option4" : "NSLog em Objective-C e print em Swift",
+    "option1" : "Instruments",
+    "option5" : "Fabrics",
+    "option2" : "Interface Builder",
+    "option3" : "Reveal App"
+  },
+  {
+    "question" : "O que é uma Category?",
+    "score" : "2",
+    "option4" : "Categories permitem adicionar métodos a classes, porém só é possível utilizar em subclasses",
+    "option1" : "Categories permitem adicionar métodos a qualquer classe.",
+    "option5" : "Categories são subclasses",
+    "option2" : "Categories permitem adicionar métodos a classes, excluindo classes de sistema.",
+    "option3" : "Categories permitem apenas sobescreever métodos de uma classe"
+  },
+  {
+    "question" : "Qual a diferença entre underscore e self na chamada de uma variável da classe (ie. self.xx e _xx)",
+    "score" : "4",
+    "option4" : "Underscore deve ser utilizado quando implementa KVO já que não é possível quando se usa self",
+    "option1" : "Underscore é acesso direto a variável, enquanto self ele passa pelos métodos de set e get da variável",
+    "option5" : "Self deve ser utlizado em métodos como lazy instantiation porque o uso de underscore causaria chamadas infinitas do setter da variável",
+    "option2" : "Nenhuma diferença",
+    "option3" : "Underscore somente deve ser utilizado quando você vai escrever um valor na variável enquanto self somente para leitura"
+  },
+  {
+    "question" : "No construtor de uma UITableViewCell, qual o propósito reuseIdentifier serve para:",
+    "score" : "3",
+    "option4" : "identificar o indexPath da célula, acelerando a configuração da mesma",
+    "option1" : "é usado para agrupar celulas similares na tableView reutilizando-as, evitando assim a realocação de células do mesmo tipo apenas com conteúdo diferente",
+    "option5" : "permitir que a tableView verifique com antecedência em que posição na lista a célula deverá ser alocada",
+    "option2" : "permitir que ao executar dequeueReusableCellWithIdentifier a tableView possa remover uma célula não visível poupando memória e evitando realocação de UITableViewCell que já está na memória",
+    "option3" : "permitir que a tableView saiba que tipo de célula será alocada na memória antes do método cellForRowAtIndexPath: ser executado, evitando crash por valor nulo na mesma"
+  },
+  {
+    "question" : "Qual das opções é verdade quanto aos patterns Delegate and KVO?",
+    "score" : "3",
+    "option4" : "Delegate estabelece uma relação many-to-many onde um objeto faz um broadcast de uma mensagem para um ou mais objetos sem que eles precisem estar registrados como observers",
+    "option1" : "em Delegate a relação entre objetos é de one-to-one, onde um objeto implementa o protocolo delegate e o outro envia as mensagens para eles assumingo que esse protocolo foi implementado",
+    "option5" : "Delegates e KVO executam a mesma função de modos diferentes, sendo que em ambas um objeto faz um broadcast de mensagens que podem ser acessadas por objetos \"observadores\"",
+    "option2" : "em KVO a relação entre objetos é de um para um, onde um objeto implementa o protocolo delegate e o outro envia as mensagens para eles assumingo que esse protocolo foi implementado",
+    "option3" : "KVO estabelece uma relação many-to-many onde um objeto faz um broadcast de uma mensagem para um ou mais objetos sem que eles precisem estar registrados como observers"
+  },
+  {
+    "question" : "Quail dos listadas abaixo não podem ser usadads para trabalhar com layout de UIViews?",
+    "score" : "2",
+    "option4" : "CGRect",
+    "option1" : "NSLayoutGuide",
+    "option5" : "Auto Layout",
+    "option2" : "Interface Builder",
+    "option3" : "Constraints"
+  },
+  {
+    "question" : "São opções nativas para persistencia de dados no iOS:",
+    "score" : "2",
+    "option4" : "MySQL e NSUserDefaults",
+    "option1" : "NSUserDefaults e Core Data",
+    "option5" : "SQLite e Realm",
+    "option2" : "Realm e Core Data",
+    "option3" : "Realm e Plist"
+  },
+  {
+    "question" : "No código - (void)my_viewWillAppear:(BOOL)animated { [self my_viewWillAppear:animated]; } Não ocorre um loop infinito, possivelmente porque?",
+    "score" : "5",
+    "option4" : "Pois está rodando na main queue",
+    "option1" : "É um Method Swizzling",
+    "option5" : "Está em uma framework estática",
+    "option2" : "Uso de KVO",
+    "option3" : "Objective-C previne"
+  },
+  {
+    "question" : "São gerenciadores de dependência utilizados com frequência por desenvolvedores iOS:",
+    "score" : "3",
+    "option4" : "Github e BitBucket",
+    "option1" : "CocoaPods e Carthage",
+    "option5" : "Xcode e Frameworks",
+    "option2" : "CocoaPods e Ant",
+    "option3" : "Carthage e Github"
+  },
+  {
+    "question" : "A opção de parse nativo de JSON no iOS:",
+    "score" : "3",
+    "option4" : "ObjectMapper",
+    "option1" : "JSONSerialization",
+    "option5" : "JSONMapper",
+    "option2" : "SwiftyJSON",
+    "option3" : "JSONMapper"
   }
 ]
