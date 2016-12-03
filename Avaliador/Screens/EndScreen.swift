@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class EndScreen: UIViewController {
     
+    var managedObjectContext: NSManagedObjectContext? = nil
     var endMessageLabel: UILabel!
     var userRate: Float = 0
     var headerBgView: UIView!
@@ -41,8 +43,9 @@ class EndScreen: UIViewController {
     func buildUI() {
         
         endMessageLabel = BasicControls.basicLabel(fontSize: ThemeManager.baseFontSize * 1.2)
+        endMessageLabel.textAlignment = .center
         endMessageLabel.textColor = .mainGreen
-        endMessageLabel.text = "Obrigado por participar do teste. \n\nPara fechar o teste, bastar tocar em \"Encerrar\"."
+        endMessageLabel.text = "Obrigado por participar do teste. \n\nPara fechar o teste, \nbastar tocar em \"Encerrar\"."
         
         view.addSubview(endMessageLabel)
         endMessageLabel.align(attribute: .left, offset: ThemeManager.baseMargin * 2)
@@ -69,7 +72,7 @@ class EndScreen: UIViewController {
         let logoImgView = UIImageView(image: UIImage(named: "cocoaheads_teammember"))
         logoImgView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoImgView)
-        logoImgView.align(attribute: .top, offset: ThemeManager.baseMargin / 2)
+        logoImgView.align(attribute: .top, offset: ThemeManager.baseMargin)
         logoImgView.align(attribute: .left, offset: ThemeManager.baseMargin / 2)
         
         
@@ -114,7 +117,7 @@ class EndScreen: UIViewController {
         currentUserInfo.text = user.email
         
         
-        let cleanText = "Obrigado por participar do teste, \(user.name)!\n\nSeu resultado foi:\n\n \(user.score) pontos, correspondendo a \(Int(userRate))% de aproveitamento da avaliação. \n\n\nPara fechar o teste, bastar usar o botão \"Encerrar\"."
+        let cleanText = "Obrigado por participar do teste, \(user.name)!\n\nSeu resultado foi:\n\n \(user.score) pontos, correspondendo a \(Int(userRate))% de aproveitamento da avaliação. \n\n\nPara fechar o teste, \nbastar usar o botão \"Encerrar\"."
         
         let defaultAttributes:[String:AnyObject] = [NSFontAttributeName: endMessageLabel.font, NSForegroundColorAttributeName: UIColor.mainGreen]
         
@@ -123,16 +126,47 @@ class EndScreen: UIViewController {
         let attrStr = NSMutableAttributedString(string: cleanText, attributes: defaultAttributes)
         
         attrStr.addAttributes(specialAttributes, range: cleanText.NS.range(of: user.name))
+        attrStr.addAttributes(specialAttributes, range: cleanText.NS.range(of: "\(user.score)"))
         attrStr.addAttributes(specialAttributes, range: cleanText.NS.range(of: "\(Int(userRate))%"))
         
         endMessageLabel.attributedText = attrStr
         
-        
-//        endMessageLabel.text = 
+        insertNewObject()
     }
     
     func finishTapped() {
+        insertNewObject()
         _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    // CoreData deals
+    
+    func insertNewObject() {
+        
+        guard let context = self.managedObjectContext else { return }
+        
+        let entity = NSEntityDescription.entity(forEntityName: "UserData", in: context)
+        
+        let record = NSManagedObject(entity: entity!, insertInto: self.managedObjectContext)
+        
+        record.setValue(user.name, forKey: "name")
+        record.setValue(user.email, forKey: "email")
+        record.setValue(user.score, forKey: "score")
+        record.setValue(userRate, forKey: "rate")
+        
+        do {
+            // Save Record
+            try record.managedObjectContext?.save()
+            print("Saved!")
+            
+        } catch {
+            let saveError = error as NSError
+            print("\(saveError), \(saveError.userInfo)")
+            
+            // Show Alert View
+            print("Your to-do could not be saved.")
+        }
+        
     }
     
 }
